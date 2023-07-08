@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<div>
+    {% if user.is_authenticated %}
+    <div>
+      {% include 'navbar.html' %}
+    </div>
+    <div class="newblock">{% include 'header.html' %}</div>
+
+    <!-- HEADER -->
+    
+
+    
+      <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{%static 'images/abc.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption ">
+              <div class="card" style="width: 10rem;">
+                <div class="card-body">
+                  <h5 class="card-title">NIKE aGR650</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">NIKE black running shoe jhewbhefoheuohccwd gsvgdyiw</p>
+                  <a href="{% url 'cart:cart_detail' %}" class="btn btn-secondary"> CART</a>
+
+                </div>
+                </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'images/download.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption ">
+            <div class="card" style="width: 10rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+        </div>
+        </div> 
+        <div class="carousel-item">
+          <img src="{% static 'images/img.png' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption ">
+            <div class="card" style="width: 10rem;">
+                <div class="card-body">
+                  <h5 class="card-title">NIKE LGR650</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">NIKE black running shoe jhewbhefoheuohccwd gsvgdyiw</p>
+                  <a href="#" class="btn btn-secondary"> CART</a>
+
+                </div>
+              </div>
+        </div>
+        </div>
+      </div>
+    </div> -->
+   
+
+    
+    {% else %}
+    <div class="log">
+      <h1> LOGIN </h1>
+      <form method='POST' action="{% url 'index' %}" style="width: 500px; height: 500px; text-align: center; align-items: center; margin-right: 200px;">
+        {% csrf_token %}
+        <br>
+        <div class="mb-3">
+          <input type="text" class="form-control" name='username' placeholder='User Name' required>
+        </div>
+        <br>
+        <div class="mb-3">
+          <input type="password" name='password' class="form-control" placeholder="Password" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">  LOGIN </button>
+
+      </form>
+    </div>
+    
+      {% endif %}
+
+
+</div>
+{% endblock content %}

@@ -1,0 +1,52 @@
+<!-- <div class="navbar">
+    <div class="log">
+        <a href="{% url 'index' %}">NIKE</a>
+    </div>
+    <ul class="links">
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="{% url 'card' %}">Product</a></li>
+        <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+        <li><a href="#">Cart</a></li>
+
+    </ul>
+    <input type="text" class="search" placeholder="Search..">
+
+    <div class="toggle_btn">
+         <i class="fa-regular fa-bars"></i> -->
+    <!-- </div>
+<!-- </div> -->
+<nav class="navbar nav-fill w-100" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">NIKE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link "href="{% url 'card' %}">Product</a>
+          </li>
+            
+          <li class="nav-item">
+            <a class="nav-link "href="{% url 'cart:cart_detail' %}">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link "href="{% url 'logout' %}">Logout</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav> 
